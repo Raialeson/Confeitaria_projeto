@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces Sonhos | Confeitaria Artesanal</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="imagem.jpeg" href="./imagens/icon_bolo.jpeg"
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação -->
+    <header>
+        <div class="logo">🍰 Doces Sonhos Confeitaria</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#produtos">Cardápio</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <li>
+                    <a href="carrinho.html" class="carrinho-link">
+                        🛒 Carrinho (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Doces Feitos com Amor</h1>
+            <p>Os melhores bolos, tortas e doces artesanais da cidade.</p>
+            <a href="#produtos" class="btn">Ver Cardápio</a>
+        </div>
+    </section>
+
+    <!-- Seção de Produtos -->
+    <section id="produtos" class="produtos">
+        <h2>Nosso Cardápio</h2>
+        <div class="grid-produtos">
+            
+            <div class="card-produto">
+                <img src="imagens/Bolo_chocolate.jpeg" alt="Bolo de Chocolate">
+                <h3>Bolo de Chocolate Gourmet</h3>
+                <p>Massa molhadinha com recheio cremoso de brigadeiro 50% cacau.</p>
+                <span class="preco">R$ 65,00</span>
+                <button onclick="adicionarAoCarrinho('Bolo de Chocolate Gourmet', 65)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/Torta_morango.jpeg" alt="Torta de Morango">
+                <h3>Torta de Morango</h3>
+                <p>Creme de confeiteiro especial com morangos frescos.</p>
+                <span class="preco">R$ 55,00</span>
+                <button onclick="adicionarAoCarrinho('Torta de Morango', 55)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="imagens/Cookies.jpeg" alt="Cupcake de Baunilha">
+                <h3>Kit Cookies (4 un)</h3>
+                <p>Tradicional com gotas de chocolate.</p>
+                <p>Três Chocolates (Choco Trio).</p>
+                <p>Gotas de Chocaletes com Nozes.</p>
+                <span class="preco">R$ 32,00</span>
+                <button onclick="adicionarAoCarrinho('Kit Cookies (4 un)', 32)">Adicionar ao Carrinho</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <p>&copy; 2026 Doces Sonhos Confeitaria. Todos os direitos reservados.</p>
+        <p>Siga-nos no Instagram: @docessonhos_confeitaria</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
