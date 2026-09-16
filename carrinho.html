@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Carrinho | Doces Sonhos</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="imagem.jpeg" href="./imagens/icon_bolo.jpeg"
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">🍰 Doces Sonhos Confeitaria</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#produtos">Cardápio</a></li>
+                <li>
+                    <a href="carrinho.html" class="carrinho-link ativo">
+                        🛒 Carrinho (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da Página de Carrinho -->
+    <main class="carrinho-pagina">
+        <h1>Seu Carrinho de Compras</h1>
+
+        <div class="carrinho-container">
+            <div id="lista-carrinho" class="lista-carrinho">
+                <!-- Os itens adicionados vão aparecer aqui dinamicamente -->
+            </div>
+
+            <div class="resumo-carrinho">
+                <h2>Resumo do Pedido</h2>
+                <div class="linha-total">
+                    <span>Total:</span>
+                    <strong>R$ <span id="cart-total">0,00</span></strong>
+                </div>
+                
+                <button class="btn-whatsapp" onclick="enviarPedidoWhatsapp()">
+                    Finalizar Pedido via WhatsApp
+                </button>
+                <a href="index.html#produtos" class="btn-voltar">Continuar Comprando</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Doces Sonhos Confeitaria. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

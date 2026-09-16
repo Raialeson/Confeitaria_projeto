@@ -1,0 +1,251 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdf8f5;
+    color: #4a3e3d;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e88a72;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a3e3d;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e88a72;
+}
+
+.carrinho-link {
+    background-color: #fbe3db;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #e88a72 !important;
+}
+
+.carrinho-link.ativo {
+    background-color: #e88a72;
+    color: white !important;
+}
+
+/* Banner Principal */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./imagens/Banner_principal.jpeg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero-text p { font-size: 1.2rem; margin-bottom: 20px; }
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e88a72;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover { background-color: #d6755c; }
+
+/* Seção de Produtos */
+.produtos {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.produtos h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-produto {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-produto h3 { margin-bottom: 10px; }
+.card-produto p { font-size: 0.9rem; color: #777; margin-bottom: 15px; }
+
+.preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e88a72;
+    margin-bottom: 15px;
+}
+
+.card-produto button {
+    background-color: #e88a72;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.card-produto button:hover { background-color: #d6755c; }
+
+/* Estilos da Página do Carrinho (carrinho.html) */
+.carrinho-pagina {
+    padding: 40px 5%;
+    flex: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.carrinho-pagina h1 {
+    margin-bottom: 30px;
+    color: #4a3e3d;
+}
+
+.carrinho-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .carrinho-container { grid-template-columns: 1fr; }
+}
+
+.lista-carrinho {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-carrinho:last-child { border-bottom: none; }
+
+.item-info h3 { font-size: 1.1rem; }
+.item-info p { color: #888; font-size: 0.9rem; }
+
+.btn-remover {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resumo-carrinho {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.resumo-carrinho h2 { margin-bottom: 20px; font-size: 1.3rem; }
+
+.linha-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.btn-whatsapp {
+    width: 100%;
+    background-color: #25d366; /* Verde WhatsApp */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-whatsapp:hover { background-color: #1ebc57; }
+
+.btn-voltar {
+    display: block;
+    text-align: center;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #4a3e3d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
