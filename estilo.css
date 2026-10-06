@@ -66,16 +66,25 @@ nav a:hover {
 /* Banner Principal */
 .hero {
     height: 60vh;
+    min-height: 350px;
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./imagens/Banner_principal.jpeg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 20px;
 }
 
-.hero-text h1 { font-size: 3rem; margin-bottom: 10px; }
-.hero-text p { font-size: 1.2rem; margin-bottom: 20px; }
+.hero-text h1 { 
+    font-size: 3rem; 
+    margin-bottom: 10px; 
+}
+
+.hero-text p { 
+    font-size: 1.2rem; 
+    margin-bottom: 20px; 
+}
 
 .btn {
     display: inline-block;
@@ -133,6 +142,7 @@ nav a:hover {
     font-weight: bold;
     color: #e88a72;
     margin-bottom: 15px;
+    margin-top: auto;
 }
 
 .card-produto button {
@@ -144,6 +154,7 @@ nav a:hover {
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s;
+    width: 100%;
 }
 
 .card-produto button:hover { background-color: #d6755c; }
@@ -166,10 +177,6 @@ nav a:hover {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
-}
-
-@media (max-width: 768px) {
-    .carrinho-container { grid-template-columns: 1fr; }
 }
 
 .lista-carrinho {
@@ -248,4 +255,65 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: auto;
+}
+
+/* ==========================================
+   MEDIA QUERIES - RESPONSIVIDADE
+   ========================================== */
+
+/* Tablets e Celulares Maiores (até 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 1rem 3%;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .carrinho-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Celulares Menores (até 480px) */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .produtos {
+        padding: 30px 15px;
+    }
+
+    .grid-produtos {
+        grid-template-columns: 1fr; /* 1 coluna em celulares pequenos */
+    }
+
+    .item-carrinho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn-remover {
+        align-self: flex-end;
+    }
 }
